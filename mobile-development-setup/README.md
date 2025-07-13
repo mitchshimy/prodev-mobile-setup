@@ -1,50 +1,80 @@
-# Welcome to your Expo app 👋
+# Mobile Development Environment Setup
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 🎯 Objective
+Set up a mobile development environment using the Expo Framework for React Native to enable efficient app development and testing on physical devices.
 
-## Get started
+## 📋 Prerequisites
+- [Node.js LTS](https://nodejs.org/) (v18+ recommended)
+- [VS Code](https://code.visualstudio.com/) (or preferred IDE)
+- macOS, Linux, or Windows OS
+- Physical iOS or Android device
 
-1. Install dependencies
+## 📱 Why Expo Go?
+| Feature | Benefit |
+|---------|---------|
+| Cross-platform | Test on both iOS & Android |
+| Cost-effective | No need for multiple physical devices |
+| Live reloading | Instant preview of changes |
+| Simplified workflow | No complex emulator setup |
 
-   ```bash
-   npm install
-   ```
+## 🛠️ Installation Guide
 
-2. Start the app
+### 1. Install Expo Go
+- **Android**: [Get on Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent)
+- **iOS**: [Get on App Store](https://apps.apple.com/app/expo-go/id982107779)
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+### 2. Verify Installation
 ```bash
-npm run reset-project
+npm install -g expo-cli
+expo --version
+# Should return version 50.0.0 or higher`
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 3. Run Your First Expo Project
 
-## Learn more
+## 📦 Setup Steps
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+expo init my-first-app
+cd my-first-app
+expo start
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 4.Testing Workflow
 
-## Join the community
+- Scan the QR code from your terminal using the **Expo Go** app.
+- Make code changes in **VS Code**.
+- See changes live on your device — hot reloading in action!
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 5.Common Issues & Solutions
+
+| Issue                  | Solution                                                  |
+|------------------------|-----------------------------------------------------------|
+| Connection problems    | Ensure device and computer are on the **same Wi-Fi**      |
+| QR code not scanning   | Manually enter the **URL** shown in the terminal          |
+| App crashes on launch  | **Clear Expo Go cache** and restart the app               |
+
+---
+
+### 📚 Resources
+
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Native Docs](https://reactnative.dev/)
+- [Troubleshooting Guide](https://docs.expo.dev/troubleshooting/common-issues/)
+
+---
+
+### 📝 Notes
+
+- Tested on **Samsung Galaxy A52 (Android 13)** and **iPhone 13 (iOS 17.5)**
+- Special configurations used:
+  - Enabled `fastRefresh` for development
+  - Used **React Navigation** for screen routing
+  - Custom fonts loaded using `expo-font`
+- Additional packages installed:
+  - `react-navigation/native`
+  - `@react-navigation/native-stack`
+  - `expo-font`
+  - `expo-status-bar`
